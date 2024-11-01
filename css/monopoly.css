@@ -1,0 +1,192 @@
+.clue-checkbox {
+  display: none; /* Oculta el checkbox real */
+}
+.clue-button {
+  display: inline-block; /* Muestra el label como un bloque en línea */
+  padding: 10px 20px; /* Espaciado interno */
+  width: 80px; /* Tamaño de ancho */
+  height: 45px; /* Tamaño de alto */
+  background-color: #333; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 1rem; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición para el color de fondo */
+  margin-bottom: 20px;    /* Espacio entre el botón y el tablero */
+}
+@media (max-width: 768px) { /* TABLET */
+  .clue-button {
+    display: inline-block; /* Muestra el label como un bloque en línea */
+    padding: 9px 18px; /* Espaciado interno */
+    width: 70px;
+    height: 39.375px;
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+    margin-bottom: 20px;    /* Espacio entre el botón y el tablero */
+  }
+}
+@media (max-width: 480px) { /* MÓVIL */
+  .clue-button {
+    display: inline-block; /* Muestra el label como un bloque en línea */
+    padding: 9px 18px; /* Espaciado interno */
+    width: 65px; /* Tamaño de ancho */
+    height: 36.5625px; /* Tamaño de ancho */
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 0.8rem; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+    margin-bottom: 20px;    /* Espacio entre el botón y el tablero */
+  }
+}
+.clue-button:hover {
+  background-color: #333; /* Color de fondo al pasar el mouse */
+}
+.clue-checkbox:checked + .clue-button {
+  background-color: #5f5f5f; /* Color cuando está chequeado */
+}
+.checkbox-container {
+  display: flex; 
+  flex-direction: column; /* Organiza en columnas */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin: 0 auto; /* Centra el contenedor */
+  width: 100%; /* Asegura que ocupe todo el ancho de la página */
+  margin-top: 2rem; /* Ajusta el margen superior según sea necesario */
+}
+ul {
+  list-style-type: none; /* Elimina el estilo de lista predeterminado */
+  display: grid; /* Utiliza un grid para la disposición */
+  grid-template-columns: repeat(5, minmax(40px, 6vw) ); /* Define 5 columnas con ancho mínimo y máximo */
+  grid-template-rows: repeat(5, minmax(40px, 6vw) ); /* Define 5 filas con altura mínima y máxima */
+  justify-content: center; /* Centra las columnas en el contenedor */
+  align-content: center; /* Centra las filas en el contenedor */
+  grid-gap: 0.5rem; /* Espacio entre los elementos de la grilla */
+  min-height: 25vh; /* Altura mínima de la grilla */
+  list-style: none;
+  margin: 0;
+  padding: 0 32px; /* Espaciado interno a los lados */
+  font-size: calc(1.5vw + 10px); /* Tamaño de fuente relativo al tamaño de la pantalla */
+}
+li {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centra el texto dentro del elemento */
+  border: 3px solid black; /* Borde negro de 3px */
+  display: flex; /* Utiliza flex para centrar el contenido */
+  align-items: center; /* Alinea el contenido verticalmente en el centro */
+  justify-content: center; /* Alinea el contenido horizontalmente en el centro */
+}
+  li span {
+    margin-top: 0.4rem; /* Margen superior del contenido dentro de span */
+  } 
+/* Define la posición de cada elemento en la grilla */
+li:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1; }
+li:nth-child(2) {
+  grid-row: 1;
+  grid-column: 2; }
+li:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3; }
+li:nth-child(4) {
+  grid-row: 1;
+  grid-column: 4; }
+li:nth-child(5) {
+  grid-row: 1;
+  grid-column: 5; }
+li:nth-child(6) {
+  grid-row: 2;
+  grid-column: 5; }
+li:nth-child(7) {
+  grid-row: 3;
+  grid-column: 5; }
+li:nth-child(8) {
+  grid-row: 4;
+  grid-column: 5; }
+li:nth-child(9) {
+  grid-row: 5;
+  grid-column: 5; }
+li:nth-child(10) {
+  grid-row: 5;
+  grid-column: 4; }
+li:nth-child(11) {
+  grid-row: 5;
+  grid-column: 3; }
+li:nth-child(12) {
+  grid-row: 5;
+  grid-column: 2; }
+li:nth-child(13) {
+  grid-row: 5;
+  grid-column: 1; }
+li:nth-child(14) {
+  grid-row: 4;
+  grid-column: 1; }
+li:nth-child(15) {
+  grid-row: 3;
+  grid-column: 1; }
+li:nth-child(16) {
+  grid-row: 2;
+  grid-column: 1; }
+input[type=checkbox]:checked ~ ul li span { 
+  margin-top: 0.8rem; /* Ajusta el margen superior cuando el checkbox está seleccionado */
+}
+/* Estilos específicos para algunos elementos de la grilla cuando el checkbox está seleccionado */
+input[type=checkbox]:checked ~ ul li:nth-child(2),
+input[type=checkbox]:checked ~ ul li:nth-child(3),
+input[type=checkbox]:checked ~ ul li:nth-child(4) {
+  transform: rotate(180deg); /* Rota los elementos 180 grados */
+  background: linear-gradient(to bottom, #333 0px, #333 2vw, black 2vw, black calc(2vw + 4px), white calc(2vw + 4px), white 10vw); /* Fondo con degradado */
+}
+input[type=checkbox]:checked ~ ul li:nth-child(6),
+input[type=checkbox]:checked ~ ul li:nth-child(7),
+input[type=checkbox]:checked ~ ul li:nth-child(8) {
+  transform: rotate(270deg);
+  background: linear-gradient(to bottom, #333 0px, #333 2vw, black 2vw, black calc(2vw + 4px), white calc(2vw + 4px), white 10vw); /* Fondo con degradado */
+}
+input[type=checkbox]:checked ~ ul li:nth-child(12),
+input[type=checkbox]:checked ~ ul li:nth-child(11),
+input[type=checkbox]:checked ~ ul li:nth-child(10) {
+  background: linear-gradient(to bottom, #333 0px, #333 2vw, black 2vw, black calc(2vw + 4px), white calc(2vw + 4px), white 10vw); /* Fondo con degradado */
+}
+input[type=checkbox]:checked ~ ul li:nth-child(16),
+input[type=checkbox]:checked ~ ul li:nth-child(15),
+input[type=checkbox]:checked ~ ul li:nth-child(14) {
+  transform: rotate(90deg);
+  background: linear-gradient(to bottom, #333 0px, #333 2vw, black 2vw, black calc(2vw + 4px), white calc(2vw + 4px), white 10vw); /* Fondo con degradado */
+}
+/* Rotación específica para ciertos elementos de la grilla cuando el checkbox está seleccionado */
+input[type=checkbox]:checked ~ ul li:nth-child(1) span {
+  transform: rotate(135deg); /* Rota el contenido dentro del span */
+  margin-top: 0; }
+input[type=checkbox]:checked ~ ul li:nth-child(5) span {
+  transform: rotate(225deg);
+  margin-top: 0; }
+input[type=checkbox]:checked ~ ul li:nth-child(9) span {
+  transform: rotate(315deg);
+  margin-top: 0; }
+input[type=checkbox]:checked ~ ul li:nth-child(13) span {
+  transform: rotate(45deg);
+  margin-top: 0; }
+.note {
+  background: #ddd; /* Color de fondo */
+  font-family: monospace; /* Fuente monospace */
+  padding: 2em 5em; /* Espaciado interno */
+  font-size: 120%; /* Tamaño de fuente */
+  order: -1; /* Coloca el elemento antes en el flujo de la página */  
+}
+/* Oculta .note si el navegador soporta display: grid */
+@supports (display: grid) {
+  .note {
+    display: none; } }

@@ -1,0 +1,228 @@
+html { /* Configura el tamaño de la fuente base para todo el documento HTML */
+    font-size:100%;
+}
+h1, h2, h3, h4, h5, h6 { /* Estilos generales para los encabezados */
+    font-family: 'Bebas Neue', bebas-neue; /* Aplica la fuente 'Bebas Neue' a todos los encabezados */
+    font-weight: 700; /* Define el peso (negrita) */
+    color: #333; /* Cambia el color del texto */
+    letter-spacing: 1px; /* Añade espacio entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+.custom-container { /* Estilos para el contenedor informativo superior */
+    background-color: #000000; /* Color de fondo del contenedor */
+    color: #ffffff; /* Color de texto */
+    font-size: 1rem; /* Tamaño base del texto en pantallas grandes */
+    padding: 10px 20px; /* Padding horizontal y vertical base */
+    height: 35px; /* Altura automática en pantallas grandes */
+    text-align: center; /* Alinea el texto en el centro */
+}
+@media (max-width: 768px) { /* TABLET */
+    .custom-container {
+        font-size: 0.85rem; /* Reduce el tamaño del texto */
+        padding: 8px 16px; /* Reduce el padding */
+        height: 30px; /* Reduce el tamaño */
+        text-align: center; /* Alinea el texto en el centro */
+    }
+}
+@media (max-width: 480px) { /* MÓVIL */
+    .custom-container {
+        font-size: 0.70rem; /* Reduce aún más el tamaño del texto */
+        padding: 6px 12px; /* Reduce aún más el padding */
+        height: 25px; /* Reduce aún más el tamaño */
+        text-align: center; /* Alinea el texto en el centro */
+    }
+}
+.navbar { /* Estilos para la barra de navegación */
+    max-height: 80px; /* Limita la altura máxima de la barra de navegación */
+    font-family: 'Bebas Neue', bebas-neue; /* Asigna la fuente 'Bebas Neue' a la barra de navegación */
+    font-size: 1.5rem; /* Define el tamaño de la fuente en la barra de navegación */
+}
+.navbar-logo { /* Estilos para el logotipo dentro de la barra de navegación */
+    max-height: 100%; /* Ajusta la altura máxima al 100% de la barra de navegación */
+    height: 40px; /* Asigna la altura */
+    width: auto; /* Mantiene la proporción de ancho automáticamente */
+    display: block; /* Asegura que el logotipo se muestre como un bloque dentro del nav */
+    margin: auto; 
+}
+@media (max-width: 991px) { /* PC PEQUEÑO Y TABLET */
+    .navbar-logo { /* Estilos para el logotipo dentro de la barra de navegación */
+        max-height: 100%; /* Ajusta la altura máxima al 100% de la barra de navegación */
+        height: 30px; /* Asigna la altura */
+        width: auto; /* Mantiene la proporción de ancho automáticamente */
+        display: block; /* Asegura que el logotipo se muestre como un bloque dentro del nav */
+        margin: 0; 
+    }
+    .navbar-collapse { /* Ajusta la clase al contenedor del menú desplegable */
+        background-color: #f8f9fa; /* Establece un fondo blanco */
+        padding: 10px; /* Agrega padding para mejor separación del contenido */
+    }
+}
+@media (max-width: 480px) { /* MÓVIL */
+    .navbar-logo { /* Estilos para el logotipo dentro de la barra de navegación */
+        max-height: 100%; /* Ajusta la altura máxima al 100% de la barra de navegación */
+        height: 25px; /* Asigna la altura */
+        width: auto; /* Mantiene la proporción de ancho automáticamente */
+        display: block; /* Asegura que el logotipo se muestre como un bloque dentro del nav */
+        margin: 0; 
+    }
+    .navbar-collapse { /* Ajusta la clase al contenedor del menú desplegable */
+        background-color: #f8f9fa; /* Establece un fondo blanco */
+        padding: 10px; /* Agrega padding para mejor separación del contenido */
+    }
+}
+body h1 { 
+    font-size: 2rem; /* Define el tamaño de fuente específico para el título principal (h1) en el "body" */   
+}
+@media (max-width: 768px) { /* TABLET */
+    body h1 {
+        font-size: 1.5rem; /* Define el tamaño de fuente específico para el título principal (h1) en el "body" */   
+    }
+}
+@media (max-width: 480px) { /* MÓVIL */
+    body h1 {
+        font-size: 1.25rem; /* Define el tamaño de fuente específico para el título principal (h1) en el "body" */   
+    }
+}
+.carousel-section { /* Define la sección de los "carouseles" */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 20px; /* Espacio entre los "carouseles" */
+}
+@media (max-width: 768px) { /* TABLET Y MÓVIL */
+    .carousel-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas de tabletas y móviles */
+        grid-template-rows: repeat(2, auto); /* 2 filas para que cada fila tenga 2 "carouseles" */
+        gap: 15px; /* Ajusta el espacio entre "carouseles" */
+    }
+}
+.collections-section { /* Define la sección de las "cards" */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    gap: 10px; /* Espacio entre las "cards" */
+    
+}
+@media (max-width: 768px) { /* TABLET Y MÓVIL */
+    .collections-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en la fila */
+        grid-template-rows: auto auto; /* Dos filas automáticas */
+        gap: 10px; /* Espacio entre las "cards" */
+    }
+    .collections-section > :nth-child(3) {
+        grid-column: span 2; /* La tercera "card" ocupa ambas columnas */
+    }
+}
+.card { /* Estilo específico para las "cards" */
+    border: none; /* Elimina cualquier borde */
+    border-radius: 0; /* Quita el redondeo de las esquinas */
+}
+.info-section { /* Estilos para la sección de información de la sección 3 */
+    padding: 20px; /* Añade espacio interno */
+    background-color: #f9f9f9; /* Define un color de fondo */
+    border: 1px solid #ddd; /* Define el color del borde alrededor de la sección */
+    border-radius: 8px; /* Redondea las esquinas del borde */
+    margin-top: 0px; /* Deja margen arriba */
+    margin-left: 20px; /* Deja margen a la izquierda */
+    margin-right: 20px; /* Deja margen a la derecha */
+    margin-bottom: 20px; /* Deja margen abajo */
+}
+.info-section h2 { /* Estilos para el título principal (h2) de la sección de información de la sección 3 */
+    font-size: 1.5rem; /* Define el tamaño de fuente para el título */
+    color: #333; /* Aplica un color para el título */
+    margin-bottom: 15px; /* Añade espacio debajo del título */
+    text-align: center; /* Centra el texto del título */
+}
+@media (max-width: 768px) { /* TABLET */
+    .info-section h2 {
+        font-size: 1.25rem; /* Cambia el tamaño de los títulos secundarios */
+    }
+}
+@media (max-width: 480px) { /* MÓVIL */
+    .info-section h2 {
+        font-size: 1rem; /* Cambia el tamaño de los títulos secundarios */
+    }
+}
+.info-item { /* Estilos para cada ítem dentro de la sección de información de la sección 3 */
+    margin-bottom: 15px; /* Añade espacio debajo de cada ítem para separación */
+}
+.info-item h3 { /* Estilos para los subtítulos (h3) de cada ítem en la sección de información de la sección 3 */
+    font-size: 1.25rem; /* Define el tamaño de fuente de los subtítulos */
+    color: #555; /* Aplica un color para los subtítulos */
+    margin-bottom: 5px; /* Añade espacio debajo del subtítulo */
+}
+@media (max-width: 768px) { /* TABLET */
+    .info-item h3 {
+        font-size: 1rem; /* Cambia el tamaño de los títulos terciarios */
+    }
+}
+@media (max-width: 480px) { /* MÓVIL */
+    .info-item h3 {
+        font-size: 0.9rem; /* Cambia el tamaño de los títulos terciarios */
+    }
+}
+.info-item p { /* Estilos para el texto de párrafos dentro de los ítems de información */
+    display: flex; /* Permite alinear los elementos en fila */
+    align-items: center; /* Centra verticalmente el checkbox y el texto */
+    justify-content: space-between; /* Espacia el texto y el checkbox */
+    font-size: 1rem; /* Define el tamaño de fuente para el texto del párrafo */
+    color: #666; /* Aplica un color al texto */
+    line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+    margin: 0; /* Elimina el margen para alinear bien los párrafos */
+}
+@media (max-width: 768px) { /* TABLET */
+    .info-item p { /* Estilos para el texto de párrafos dentro de los ítems de información */
+        display: flex; /* Permite alinear los elementos en fila */
+        align-items: center; /* Centra verticalmente el checkbox y el texto */
+        justify-content: space-between; /* Espacia el texto y el checkbox */
+        font-size: 0.9rem; /* Define el tamaño de fuente para el texto del párrafo */
+        color: #666; /* Aplica un color al texto */
+        line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+        margin: 0; /* Elimina el margen para alinear bien los párrafos */
+    }
+}
+@media (max-width: 480px) { /* MÓVIL */
+    .info-item p { /* Estilos para el texto de párrafos dentro de los ítems de información */
+        display: flex; /* Permite alinear los elementos en fila */
+        align-items: center; /* Centra verticalmente el checkbox y el texto */
+        justify-content: space-between; /* Espacia el texto y el checkbox */
+        font-size: 0.8rem; /* Define el tamaño de fuente para el texto del párrafo */
+        color: #666; /* Aplica un color al texto */
+        line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+        margin: 0; /* Elimina el margen para alinear bien los párrafos */
+    }
+}
+.footer-custom {
+    background-color: #1a1a1a; /* Color de fondo, ajusta según tu paleta */
+    color: #f8f9fa; /* Color del texto */
+}
+
+.footer-custom .footer-link {
+    color: #b2b2b2; /* Color de los enlaces */
+    transition: color 0.3s ease;
+}
+
+.footer-custom .footer-link:hover {
+    color: #a01f1f; /* Color al pasar el mouse */
+}
+
+.footer-custom .footer-icon:hover {
+    color: #b2b2b2; /* Color de los íconos al pasar el mouse */
+}
+.footer-custom h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', bebas-neue; /* Aplica la fuente 'Bebas Neue' a todos los encabezados */
+    font-weight: 700; /* Define el peso (negrita) */
+    color: #b2b2b2; /* Cambia el color del texto */
+    letter-spacing: 1px; /* Añade espacio entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+html {
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
